@@ -20,6 +20,10 @@
             android:id="@+id/nav_statistical"
             android:icon="@drawable/ic_menu_statistical"
             android:title="@string/menu_statistical" />
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/oo"
+            android:title="chat" />
     </group>
 
     <item android:title="Communicate">
@@ -32,6 +36,10 @@
                 android:id="@+id/nav_contact"
                 android:icon="@drawable/ic_menu_contact"
                 android:title="@string/menu_contact" />
+            <item
+                android:id="@+id/nav_out"
+                android:icon="@drawable/pp"
+                android:title="Log-out" />
         </menu>
     </item>
 

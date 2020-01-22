@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity  {
 
-
+    private TextView tvRegister;
     private ProgressDialog pD ;
     private TextView email;
     private TextView password;
@@ -42,7 +42,17 @@ public class LoginActivity extends AppCompatActivity  {
         Button connect = (Button) findViewById(R.id.ButtonConnect);
         final TextView email= (TextView)findViewById(R.id.emailLog);
         final TextView password= (TextView)findViewById(R.id.passwordLog);
+        tvRegister = findViewById(R.id.tvRegister);
         pD = new ProgressDialog(this);
+
+
+        tvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, RoleActivity.class));
+                finish();
+            }
+        });
         connect.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
@@ -119,6 +129,9 @@ public class LoginActivity extends AppCompatActivity  {
             };
             RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
             Log.d("iSConnected", String.valueOf(isConnected));
+
+
+
 
         }
     }
